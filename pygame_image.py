@@ -22,8 +22,15 @@ def main():
             if event.type == pg.QUIT: return
         
         key_lst = pg.key.get_pressed()
-        print(key_lst[pg.K_UP], key_lst[pg.K_DOWN],key_lst[pg.K_LEFT], key_lst[pg.K_RIGHT])
-        
+        # print(key_lst[pg.K_UP], key_lst[pg.K_DOWN],key_lst[pg.K_LEFT], key_lst[pg.K_RIGHT])
+        if key_lst[pg.K_UP]:
+            kk_rct.move_ip(0,-1)
+        if key_lst[pg.K_DOWN]:
+            kk_rct.move_ip(0,1)
+        if key_lst[pg.K_LEFT]:
+            kk_rct.move_ip(-1,0)
+        if key_lst[pg.K_RIGHT]:
+            kk_rct.move_ip(1,0)
         
         x = tmr%3200
         screen.blit(bg_img, [-x, 0]) #screen Surfaceに背景画像Surfaceを貼り付ける
