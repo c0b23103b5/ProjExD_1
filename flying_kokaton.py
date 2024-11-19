@@ -30,7 +30,7 @@ def main():
         if key_lst[pg.K_LEFT]:
             w_k = -1
         if key_lst[pg.K_RIGHT]:
-            w_k = 2
+            w_k = 1
         kk_rct.move_ip(w_k,h_k)
         w_k = 0
         h_k = 0
